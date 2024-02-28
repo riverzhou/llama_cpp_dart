@@ -10327,19 +10327,14 @@ class llama_cpp {
       _llama_model_quantize_default_paramsPtr
           .asFunction<llama_model_quantize_params Function()>();
 
-  void llama_backend_init(
-    bool numa,
-  ) {
-    return _llama_backend_init(
-      numa,
-    );
+  void llama_backend_init(){
+    return _llama_backend_init();
   }
 
   late final _llama_backend_initPtr =
-      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Bool)>>(
-          'llama_backend_init');
+      _lookup<ffi.NativeFunction<ffi.Void Function()>>('llama_backend_init');
   late final _llama_backend_init =
-      _llama_backend_initPtr.asFunction<void Function(bool)>();
+      _llama_backend_initPtr.asFunction<void Function()>();
 
   void llama_backend_free() {
     return _llama_backend_free();
