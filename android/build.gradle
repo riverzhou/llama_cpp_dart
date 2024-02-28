@@ -31,8 +31,8 @@ android {
 
     // Bumping the plugin compileSdkVersion requires all clients of this plugin
     // to bump the version in their app.
-    compileSdkVersion 31
-    compileSdk 31
+    compileSdkVersion 33
+    compileSdk 33
 
     // Use the NDK version
     // declared in /android/app/build.gradle file of the Flutter project.
