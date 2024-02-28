@@ -71,7 +71,7 @@ class Llama {
       this.loraAdapters = const []])
       : modelParams = modelParams ?? ModelParams(),
         contextParams = contextParams ?? ContextParams() {
-    lib.llama_backend_init(false);
+    lib.llama_backend_init();
     llama_model_params modelParams = this.modelParams.get();
 
     Pointer<Char> char = modelPath.toNativeUtf8().cast<Char>();
